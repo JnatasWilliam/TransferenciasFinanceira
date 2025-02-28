@@ -1,0 +1,24 @@
+{
+  "name": "TransferenciasFinanceira",
+  "version": "1.0.0",
+  "description": "1. **Clonar o repositório:**\r    gitbash\r    git clone https://github.com/JnatasWilliam/TransferenciasFinanceira.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "vue-cli-service serve"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JnatasWilliam/TransferenciasFinanceira.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JnatasWilliam/TransferenciasFinanceira/issues"
+  },
+  "homepage": "https://github.com/JnatasWilliam/TransferenciasFinanceira#readme"
+}
