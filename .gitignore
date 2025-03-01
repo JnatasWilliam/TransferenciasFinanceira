@@ -1,8 +1,13 @@
 HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Diretórios de build
+/target/
+/bin/
+/build/
+
+# Maven Wrapper
+.mvn/
+mvnw
+mvnw.cmd
 
 ### STS ###
 .apt_generated
@@ -13,11 +18,22 @@ target/
 .springBeans
 .sts4-cache
 
+# Logs
+*.log
+
+# Arquivos de configuração do Spring Boot
+*.tmp
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
+out/
+
+# ======== Sistema Operacional =========
+.DS_Store
+Thumbs.db
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,3 +47,23 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# ======== Node.js / Vue.js =========
+# Pasta de dependências do Node
+node_modules/
+
+# Pasta de distribuição (build) do frontend
+/dist/
+
+# Arquivos de cache do Vue CLI
+.cache/
+
+# Arquivos de ambiente (não versionar segredos)
+.env
+.env.local
+.env.*.local
+
+# ======== Outros =========
+# Arquivos temporários
+tmp/
+temp/
