@@ -2,19 +2,22 @@ package br.com.jonatas.transferencias.TransferenciasFinanceira.Controller;
 
 import br.com.jonatas.transferencias.TransferenciasFinanceira.Service.TransferenciaService;
 import br.com.jonatas.transferencias.TransferenciasFinanceira.model.Transferencia;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:8081")
 @RestController
 @RequestMapping("/transferencias")
-@RequiredArgsConstructor
 public class TransferenciaController {
 
     private final TransferenciaService service;
+
+    TransferenciaController(TransferenciaService service){
+        this.service = service;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

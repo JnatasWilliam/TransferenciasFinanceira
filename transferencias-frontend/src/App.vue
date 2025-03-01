@@ -54,7 +54,9 @@ export default {
         this.transferencia.dataAgendamento = new Date().toISOString().split('T')[0];
       }
       try {
+        console.log(this.transferencia);
         const response = await axios.post('http://localhost:8080/transferencias', this.transferencia);
+        console.log(response);  // Usando a variável 'response' para debugar
         alert('Transferência agendada com sucesso!');
         this.buscarTransferencias();
         // Limpa o formulário
@@ -66,7 +68,8 @@ export default {
           dataAgendamento: ''
         };
       } catch (error) {
-        alert('Erro ao agendar a transferência: ' + error.response.data);
+      console.log(error);
+        alert('Erro ao agendar a transferência: ' + error.message);
       }
     },
     async buscarTransferencias() {
