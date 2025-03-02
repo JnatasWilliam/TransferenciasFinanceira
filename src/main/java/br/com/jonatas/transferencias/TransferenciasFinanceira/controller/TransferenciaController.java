@@ -1,5 +1,7 @@
 package br.com.jonatas.transferencias.TransferenciasFinanceira.controller;
 
+import br.com.jonatas.transferencias.TransferenciasFinanceira.dto.TransferenciaDTO;
+import br.com.jonatas.transferencias.TransferenciasFinanceira.mapper.TransferenciaMapper;
 import br.com.jonatas.transferencias.TransferenciasFinanceira.service.TransferenciaService;
 import br.com.jonatas.transferencias.TransferenciasFinanceira.model.Transferencia;
 import org.springframework.http.HttpStatus;
@@ -14,20 +16,26 @@ import java.util.List;
 public class TransferenciaController {
 
     private final TransferenciaService service;
+    private TransferenciaMapper mapper;
 
-    TransferenciaController(TransferenciaService service){
+    TransferenciaController(TransferenciaService service, TransferenciaMapper mapper){
         this.service = service;
+        this.mapper = mapper;
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Transferencia criarTransferencia(@RequestBody Transferencia transferencia) {
-        return service.agendarTransferencia(transferencia);
+    public TransferenciaDTO criarTransferencia(@RequestBody TransferenciaDTO transferenciaDTO) {
+        var transferenciaEntity = mapper.toEntity(transferenciaDTO);
+        var transferenciaSalva = service.agendarTransferencia(transferenciaEntity);
+
+        return mapper.toDTO(transferenciaSalva);
     }
 
     @GetMapping
-    public List<Transferencia> listarTransferencias() {
-        return service.listarTransferencias();
+    public List<TransferenciaDTO> listarTransferencias() {
+
+        return mapper.toDTOList(service.listarTransferencias());
     }
 
     @ExceptionHandler(IllegalArgumentException.class)

@@ -1,42 +1,14 @@
-package br.com.jonatas.transferencias.TransferenciasFinanceira.model;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+package br.com.jonatas.transferencias.TransferenciasFinanceira.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "transferencias")
-public class Transferencia {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class TransferenciaDTO {
     private String contaOrigem;
     private String contaDestino;
-
     private BigDecimal valor;
-
-    // Data em que a transferência será realizada
     private LocalDate dataTransferencia;
-    // Data do agendamento (geralmente a data atual)
     private LocalDate dataAgendamento;
-
-    // Taxa calculada conforme regras de negócio
-    private BigDecimal taxa;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getContaOrigem() {
         return contaOrigem;
@@ -76,13 +48,5 @@ public class Transferencia {
 
     public void setDataAgendamento(LocalDate dataAgendamento) {
         this.dataAgendamento = dataAgendamento;
-    }
-
-    public BigDecimal getTaxa() {
-        return taxa;
-    }
-
-    public void setTaxa(BigDecimal taxa) {
-        this.taxa = taxa;
     }
 }

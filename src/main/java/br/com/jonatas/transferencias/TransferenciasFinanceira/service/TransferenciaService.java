@@ -1,5 +1,6 @@
 package br.com.jonatas.transferencias.TransferenciasFinanceira.service;
 
+import br.com.jonatas.transferencias.TransferenciasFinanceira.mapper.TransferenciaMapper;
 import br.com.jonatas.transferencias.TransferenciasFinanceira.repository.TransferenciaRepository;
 import br.com.jonatas.transferencias.TransferenciasFinanceira.model.Transferencia;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ public class TransferenciaService {
 
     private static final BigDecimal TAXA_FIXA_MESMO_DIA = new BigDecimal("3.00");
     private static final BigDecimal PERCENTUAL_MESMO_DIA = new BigDecimal("0.025");
+
 
     private static final Map<Integer, BigDecimal> TAXAS = Map.of(
             10, new BigDecimal("12.00"), // 1 a 10 dias

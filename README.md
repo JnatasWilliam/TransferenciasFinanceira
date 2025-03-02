@@ -29,3 +29,8 @@
 
 4. **Acessar o console H2:**
    Acesse http://localhost:8080/h2-console para visualizar o banco de dados (conforme configurado no arquivo application.properties).
+
+## Documentação da API
+
+Acesse a documentação interativa da API através do link:  
+[Swagger UI](http://localhost:8080/swagger-ui/index.html) (lembre-se de iniciar o app)
