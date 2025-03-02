@@ -1,6 +1,6 @@
-package br.com.jonatas.transferencias.TransferenciasFinanceira.Controller;
+package br.com.jonatas.transferencias.TransferenciasFinanceira.controller;
 
-import br.com.jonatas.transferencias.TransferenciasFinanceira.Service.TransferenciaService;
+import br.com.jonatas.transferencias.TransferenciasFinanceira.service.TransferenciaService;
 import br.com.jonatas.transferencias.TransferenciasFinanceira.model.Transferencia;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

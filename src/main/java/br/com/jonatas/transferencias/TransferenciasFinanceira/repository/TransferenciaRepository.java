@@ -1,4 +1,4 @@
-package br.com.jonatas.transferencias.TransferenciasFinanceira.Repository;
+package br.com.jonatas.transferencias.TransferenciasFinanceira.repository;
 
 
 import br.com.jonatas.transferencias.TransferenciasFinanceira.model.Transferencia;

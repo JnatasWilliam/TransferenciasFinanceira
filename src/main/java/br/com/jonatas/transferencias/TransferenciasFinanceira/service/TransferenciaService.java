@@ -1,6 +1,6 @@
-package br.com.jonatas.transferencias.TransferenciasFinanceira.Service;
+package br.com.jonatas.transferencias.TransferenciasFinanceira.service;
 
-import br.com.jonatas.transferencias.TransferenciasFinanceira.Repository.TransferenciaRepository;
+import br.com.jonatas.transferencias.TransferenciasFinanceira.repository.TransferenciaRepository;
 import br.com.jonatas.transferencias.TransferenciasFinanceira.model.Transferencia;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
