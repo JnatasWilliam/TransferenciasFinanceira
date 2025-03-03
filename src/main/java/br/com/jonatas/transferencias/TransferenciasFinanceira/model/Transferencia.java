@@ -16,18 +16,11 @@ public class Transferencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String contaOrigem;
     private String contaDestino;
-
     private BigDecimal valor;
-
-    // Data em que a transferência será realizada
     private LocalDate dataTransferencia;
-    // Data do agendamento (geralmente a data atual)
     private LocalDate dataAgendamento;
-
-    // Taxa calculada conforme regras de negócio
     private BigDecimal taxa;
 
     public Long getId() {

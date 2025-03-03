@@ -9,6 +9,7 @@ public class TransferenciaDTO {
     private BigDecimal valor;
     private LocalDate dataTransferencia;
     private LocalDate dataAgendamento;
+    private BigDecimal taxa;
 
     public String getContaOrigem() {
         return contaOrigem;
@@ -48,5 +49,13 @@ public class TransferenciaDTO {
 
     public void setDataAgendamento(LocalDate dataAgendamento) {
         this.dataAgendamento = dataAgendamento;
+    }
+
+    public BigDecimal getTaxa() {
+        return taxa;
+    }
+
+    public void setTaxa(BigDecimal taxa) {
+        this.taxa = taxa;
     }
 }

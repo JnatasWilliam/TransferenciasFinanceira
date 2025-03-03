@@ -24,7 +24,7 @@
     <h2>Transferências Agendadas</h2>
     <ul>
       <li v-for="item in transferencias" :key="item.id">
-        ID: {{ item.id }}, Conta Origem: {{ item.contaOrigem }}, Conta Destino: {{ item.contaDestino }}, Valor: {{ item.valor }}, Taxa: {{ item.taxa }}, Data Transferência: {{ item.dataTransferencia }}, Data Agendamento: {{ item.dataAgendamento }}
+        Conta Origem: {{ item.contaOrigem }}, Conta Destino: {{ item.contaDestino }}, Valor: {{ item.valor }}, Taxa: {{ item.taxa }}, Data Transferência: {{ item.dataTransferencia }}, Data Agendamento: {{ item.dataAgendamento }}
       </li>
     </ul>
   </div>
