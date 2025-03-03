@@ -4,19 +4,19 @@
     <h1 class="fonte-style-h">Agendamento de Transferências</h1>
     <form @submit.prevent="criarTransferencia">
       <div>
-        <label>Conta de Origem:</label>
+        <label style="display: block">Conta de Origem:</label>
         <input type="text" v-model="transferencia.contaOrigem" placeholder="" required>
       </div>
       <div>
-        <label>Conta de Destino:</label>
+        <label style="display: block">Conta de Destino:</label>
         <input type="text" v-model="transferencia.contaDestino" placeholder="" required>
       </div>
       <div>
-        <label>Valor:</label>
+        <label style="display: block">Valor:</label>
         <input type="number" v-model="transferencia.valor" step="0.01" required>
       </div>
       <div>
-        <label>Data de Transferência:</label>
+        <label style="display: block">Data de Transferência:</label>
         <input type="date" v-model="transferencia.dataTransferencia" required>
       </div>
       <button type="submit" class="btn btn-custom">Agendar Transferência</button>
