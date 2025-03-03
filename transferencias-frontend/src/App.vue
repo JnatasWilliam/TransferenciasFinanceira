@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <h1>Agendamento de Transferências</h1>
+  <ThemeToggle />
+    <h1 class="fonte-style-h">Agendamento de Transferências</h1>
     <form @submit.prevent="criarTransferencia">
       <div>
         <label>Conta de Origem:</label>
-        <input type="text" v-model="transferencia.contaOrigem" placeholder="XXXXXXXXXX" required>
+        <input type="text" v-model="transferencia.contaOrigem" placeholder="" required>
       </div>
       <div>
         <label>Conta de Destino:</label>
-        <input type="text" v-model="transferencia.contaDestino" placeholder="XXXXXXXXXX" required>
+        <input type="text" v-model="transferencia.contaDestino" placeholder="" required>
       </div>
       <div>
         <label>Valor:</label>
@@ -18,20 +19,40 @@
         <label>Data de Transferência:</label>
         <input type="date" v-model="transferencia.dataTransferencia" required>
       </div>
-      <!-- A data de agendamento será definida automaticamente -->
-      <button type="submit">Agendar Transferência</button>
+      <button type="submit" class="btn btn-custom">Agendar Transferência</button>
     </form>
-    <h2>Transferências Agendadas</h2>
-    <ul>
-      <li v-for="item in transferencias" :key="item.id">
-        Conta Origem: {{ item.contaOrigem }}, Conta Destino: {{ item.contaDestino }}, Valor: {{ item.valor }}, Taxa: {{ item.taxa }}, Data Transferência: {{ item.dataTransferencia }}, Data Agendamento: {{ item.dataAgendamento }}
-      </li>
-    </ul>
+
+    <div v-if="transferencias.length > 0" class="mt-5">
+      <h2 class="fonte-style-h">Transferências Agendadas</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Conta Origem</th>
+            <th>Conta Destino</th>
+            <th>Valor</th>
+            <th>Taxa</th>
+            <th>Data Transferência</th>
+            <th>Data Agendamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in transferencias" :key="item.id">
+            <td>{{ item.contaOrigem }}</td>
+            <td>{{ item.contaDestino }}</td>
+            <td>{{ item.valor }}</td>
+            <td>{{ item.taxa }}</td>
+            <td>{{ item.dataTransferencia }}</td>
+            <td>{{ item.dataAgendamento }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import ThemeToggle from './components/ThemeToggle.vue';
 
 export default {
   name: 'App',
@@ -47,6 +68,11 @@ export default {
       transferencias: []
     };
   },
+
+  components: {
+      ThemeToggle,
+    },
+
   methods: {
     async criarTransferencia() {
       // Define a dataAgendamento como hoje se não estiver preenchida

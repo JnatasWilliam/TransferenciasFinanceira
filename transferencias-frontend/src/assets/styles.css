@@ -1,0 +1,39 @@
+.btn-custom {
+  background-color: #7A1FD1;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #9F5FEF;
+}
+
+.fonte-style-h {
+  color: var(--text-color);
+}
+
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>thead>tr:nth-child(odd)>th {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #121212;
+}
+
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
