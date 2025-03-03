@@ -1,5 +1,7 @@
 # TransferenciasFinanceira
 
+Projeto para gerenciamento de transferências financeiras.
+
 ## Instruções de Execução do backend
 
 1. **Clonar o repositório:**
@@ -29,6 +31,17 @@
 
 4. **Acessar o console H2:**
    Acesse http://localhost:8080/h2-console para visualizar o banco de dados (conforme configurado no arquivo application.properties).
+
+## Instruções de Execução do frontend
+
+1. **Entrar na pasta do frontend:**
+   cd transferencias-frontend
+2. **Instale as dependências:**
+   npm install
+3. **Executar o frontend:**
+   npm run serve
+4. **Acesse o frontend no navegador**
+   (o endereço pode variar, geralmente algo como http://localhost:8080 ou outra porta configurada).
 
 ## Documentação da API
 
