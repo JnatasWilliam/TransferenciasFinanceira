@@ -65,8 +65,8 @@ export default {
 <style scoped>
 .theme-toggle {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   background: var(--background-color);
   color: var(--text-color);
   padding: 10px;
