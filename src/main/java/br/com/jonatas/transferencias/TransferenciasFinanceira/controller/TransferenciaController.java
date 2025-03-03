@@ -37,9 +37,4 @@ public class TransferenciaController {
 
         return mapper.toDTOList(service.listarTransferencias());
     }
-
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<String> handleIllegalArgumentException(IllegalArgumentException e) {
-        return ResponseEntity.badRequest().body(e.getMessage());
-    }
 }
